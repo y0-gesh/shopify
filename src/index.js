@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { ContextProvider } from './contexts/ContextProvider';
 
 ReactDOM.render(
-<ContextProvider>
+<ContextProvider children={undefined}>
    <App />
 </ContextProvider>,
 document.getElementById('root'));

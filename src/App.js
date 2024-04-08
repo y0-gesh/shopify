@@ -67,9 +67,9 @@ const App = () => {
                 <Route path="/employees" element={<Employees />} />
                 <Route path="/customers" element={<Customers />} />
 
+                <Route path="/calender" element={<Calender />} />
                 <Route path="/kanban" element={<Kanban />} />
                 <Route path="/editor" element={<Editor />} />
-                <Route path="/calender" element={<Calender />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
 
                 <Route path="/line" element={<Line />} />
