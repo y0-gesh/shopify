@@ -16,8 +16,8 @@ const ThemeSettings = () => {
           <p className="font-semibold text-lg">Settings</p>
           <button
             type="button"
-            onClick={() => {}}
-            style={{ color: "rgb(153, 171, 180)", BiBorderRadius: "50%" }}
+            onClick={() => setThemeSettings(false)}
+            style={{ color: "rgb(153, 171, 180)", borderRadius: "50%" }}
             className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray">
             <MdOutlineCancel />
           </button>
@@ -45,8 +45,8 @@ const ThemeSettings = () => {
               name="theme"
               value="Dark"
               className="cursor-pointer"
-              onChange={() => {}}
-              checked={true}
+              onChange={setMode}
+              checked={currentMode === 'Light'}
             />
             <label htmlFor="dark" className="ml-2 text-md cursor-pointer">
               Dark
@@ -65,11 +65,11 @@ const ThemeSettings = () => {
                   <button
                     type="button"
                     className="h-10 w-10 rounded-full cursor-pointer"
-                    onClick={() => setThemeSettings(false)}>
+                    onClick={() => setColor(item.color)}
                     style={{ backgroundColor: item.color }}>
                     <BsCheck
                       className={`ml-2 text-2xl text-white ${
-                        true ? "block" : "hidden"
+                          item.color === currentColor ? "block" : "hidden"
                       }`}
                     />
                   </button>

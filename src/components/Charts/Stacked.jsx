@@ -17,16 +17,16 @@ import {
   Category,
 } from "@syncfusion/ej2-react-charts";
 
-const Stacked = (width, height) => {
+const Stacked = (props) => {
   return (
     <ChartComponent
-      width="320px"
-      height="360px"
+      width={props.width}
+      height={props.height}
       id="charts"
       primaryXAxis={stackedPrimaryXAxis}
       primaryYAxis={stackedPrimaryYAxis}
       chartArea={{ border: { width: 0 } }}
-      toolTip={{ enable: true }}
+      tooltip={{ enable: true }}
       LegendSettings={{ backgrund: "white" }}>
       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />
       <SeriesCollectionDirective>
