@@ -31,8 +31,8 @@ const ThemeSettings = () => {
               name="theme"
               value="Light"
               className="cursor-pointer"
-              onChange={() => {}}
-              checked={true}
+              onChange={setMode}
+              checked={currentMode === 'Light'}
             />
             <label htmlFor="light" className="ml-2 text-md cursor-pointer">
               Light
@@ -46,7 +46,7 @@ const ThemeSettings = () => {
               value="Dark"
               className="cursor-pointer"
               onChange={setMode}
-              checked={currentMode === 'Light'}
+              checked={currentMode === 'Dark'}
             />
             <label htmlFor="dark" className="ml-2 text-md cursor-pointer">
               Dark
@@ -61,7 +61,7 @@ const ThemeSettings = () => {
                 key={index}
                 content={item.name}
                 position="TopCenter">
-                <div className="relative mt-2 cursor-pointer flex gap-5 items-center">
+                <div className="relative mt-2 cursor-pointer flex gap-5 items-center"  key={item.name}>
                   <button
                     type="button"
                     className="h-10 w-10 rounded-full cursor-pointer"
